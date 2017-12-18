@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>	João Rafael </title>
+<meta charset="UTF-8">
+<style>
+	#topo{
+	height:100px;
+	width:800px;
+	margin:0 auto;}
+
+	#logo{width:700px;
+	float:left;
+	}
+	
+	#logo img{
+	height:70px;}
+
+	#slide{
+	background:#9C9C9C;
+	height:45px;
+	width:983px;
+	margin:0 auto; 
+	text-align:center;
+	margin-top:5px;
+	float:left}
+	
+
+	#geral {
+	height:300px;
+	width:983px;
+	margin:0 auto;
+	padding:0 0 7px}
+	
+	#coluna{height:600px;
+	width:220px;
+	text-align:center;
+	float:left;}
+	
+	#postagem{
+	height:600px;
+	width:749px; 
+	text-align:center;
+	float:left;
+	margin-left:5px;
+	margin-right:5px;}
+		
+	#postagem img{border:1px solid #000;
+	height:250px;
+	width:250px; 
+	text-align:center;
+	float:left;
+	margin-left:75px;
+	margin-right:15px;
+	margin-bottom:15px;
+	margin-top:35px;}
+		
+
+.margin{margin-top:5px; 0 0 0 ;}
+	
+</style>
+</head>
+<body>
+<?
+$x="rodrigo";
+$y="123";
+$Login=$_POST {"Login"};
+$Senha=$_POST {"Senha"};
+
+if (($Login==$x) $$ ($Senha==$y))
+{?>
+
+
+<body background="fundo.jpg"> </body>
+<ul class="menu-navigation">
+	<div id ="topo">
+			<div id="logo">
+					<img src="inova.png"/>              
+			</div>
+	
+	</ul>
+		
+		</div>
+		
+		<div class="margin" id ="postagem">
+
+
+
+	<form name="cadastro"><br><br>
+Nome:<input name="nome" type="text" /><br><br>
+Sobrenome:<input type="text" name="sobrenome" /><br><br>	
+Idade:<input type="text" name="idade" /><br><br>	
+Cidade:<input type="text" name="cidade" /><br><br>	
+Estado:<input type="text" name="estado" /><br><br>	
+Pais: <input type="text" name="pais" /><br><br>		
+<input type="Button" value="Enviar" onclick="valida()">
+<input type="reset" value="Apagar">	  
+</form>
+	  
+<script type="text/javascript">
+
+function valida(){
+
+var nome = cadastro.nome.value;
+var sobrenome = cadastro.sobrenome.value;
+var idade = cadastro.idade.value;
+var cidade = cadastro.cidade.value;
+var estado = cadastro.estado.value;
+var pais = cadastro.pais.value;
+
+if (nome == ""){
+alert("Campo nome e obrigatorio");
+cadastro.nome.focus();
+return false;
+}
+if (sobrenome == ""){
+alert("Campo Sobrenome é obrigatório");
+cadastro.sobrenome.focus();
+return false;
+}
+if (idade == ""){
+alert("Campo idade é obrigatório");
+cadastro.idade.focus();
+return false;
+}
+if (cidade == ""){
+alert("Campo cidade é obrigatório");
+cadastro.cidade.focus();
+return false;
+}
+if (estado == ""){
+alert("Campo estado é obrigatório");
+cadastro.estado.focus();
+return false;
+}
+if (pais == ""){
+alert("Campo pais é obrigatório");
+cadastro.pais.focus();
+return false;
+
+}	  
+}
+</script>
+	</div>
+	<div class="limpar"></div>
+
+
+		
+		</div>
+	
+	</div>
+	<?}
+	else
+	{
+	echo "<a href + Login.php> Login e senha incorretos</a>";
+	}
+	?>
+</body>
+</html>
